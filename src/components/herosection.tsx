@@ -4,7 +4,7 @@ import React from "react";
 const Herosection = () => {
   return (
     <section className="text-white relative pt-[17.5rem] pb-[10rem]">
-      <div className="px-[5%] flex flex-col justify-center items-center relative z-100">
+      <div className="px-[5%] flex flex-col justify-center items-center relative z-50">
         <div className="text-center mb-6">
           <h1>Master your cash flow</h1>
         </div>

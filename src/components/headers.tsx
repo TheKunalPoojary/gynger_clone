@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -19,7 +20,7 @@ const Headers = () => {
       style={{ color: "#FFFFFF" }}
     >
       <div
-        className="w-full max-w-[84rem] h-20 flex static border-1 border-[#ffffff1a] rounded-[4.5rem] px-8 justify-start items-center backdrop-blur-sm gap-x-[4%]"
+        className="w-full index-100 max-w-[84rem] h-20 flex static border-1 border-[#ffffff1a] rounded-[4.5rem] px-8 justify-start items-center backdrop-blur-sm gap-x-[4%]"
         style={{ backgroundColor: "#052b28cc" }}
       >
         <Link href="/">

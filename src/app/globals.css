@@ -10,12 +10,12 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-101% - 310px));
+    transform: translateX(calc(-101% - 305px));
   }
 }
 
 .animate-infinite-scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 100s linear infinite;
 }
 
 @theme inline {
