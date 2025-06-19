@@ -30,7 +30,7 @@ const LogoShowcase = () => {
   return (
     <section className='relative py-10 overflow-hidden flex'>
       <div className='flex gap-4 animate-infinite-scroll' >
-      {logoData.map((logo , index) => (
+      {[...logoData, ...logoData].map((logo , index) => (
         <Image key={index} src={logo.url} alt={`Company logo ${index + 1}`} width={1000} height={1000} className='h-12 mr-12'/>
       ))}
       </div>

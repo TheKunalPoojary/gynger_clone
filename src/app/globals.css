@@ -5,19 +5,17 @@
   --foreground: #171717;
 }
 
-@layer utilities {
-  @keyframes infinite-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-50% - 20px));
-    }
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
   }
+  100% {
+    transform: translateX(calc(-101% - 310px));
+  }
+}
 
-  .animate-infinite-scroll {
-    animation: infinite-scroll 5s linear infinite;
-  }
+.animate-infinite-scroll {
+  animation: scroll 20s linear infinite;
 }
 
 @theme inline {
