@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Logo from "../../public/golden-luxury-house-with-pillar-for-bank-court-law-or-museum-logo-design-vector.jpg";
+import Logo from "../../public/gynger.svg";
 
 const navlinks = [
   { name: "For buyers" },
@@ -24,7 +24,7 @@ const Headers = () => {
         style={{ backgroundColor: "#052b28cc" }}
       >
         <Link href="/">
-          <Image src={Logo} alt="logo" width={50} height={50} />
+          <Image src={Logo} alt="logo" width={50} height={50} className="w-22" />
         </Link>
         <nav className="static flex flex-1 justify-start align-center self-center">
           {navlinks.map((link, index) => (

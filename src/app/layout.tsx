@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/headers";
+import Footer from "@/components/footer";
 import { Archivo } from "next/font/google";
 
 const archivo = Archivo({
@@ -36,6 +37,7 @@ export default function RootLayout({
         <div>
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
