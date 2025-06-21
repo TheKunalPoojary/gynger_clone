@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentstack/live-preview-utils": "^3.2.4",
+    "@contentstack/utils": "^1.4.1",
+    "contentstack": "^3.25.3",
     "lottie-react": "^2.4.1",
     "next": "15.3.3",
     "postcss": "^8.5.6",
