@@ -38,7 +38,7 @@ const FeatureCard = ({ title, description, animationData }: FeatureCardProps) =>
 
   return (
     <div
-      className="relative flex flex-1 flex-col rounded-xl"
+      className="relative flex flex-1 flex-col rounded-xl bg-[f7fafa]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
