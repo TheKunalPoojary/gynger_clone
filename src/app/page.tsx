@@ -1,4 +1,5 @@
 import Blueprint from "@/components/blueprint";
+import Cta from "@/components/cta";
 import Herosection from "@/components/herosection";
 import LogoShowcase from "@/components/logoShowcase";
 import Solution from "@/components/solution";
@@ -11,6 +12,7 @@ export default function Home() {
       <LogoShowcase />
       <Blueprint />
       <Solution />
+      <Cta />
     </main>
   );
 }
