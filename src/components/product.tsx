@@ -6,17 +6,17 @@ const Product = () => {
     <section className="w-fullpt-30">
       <div className="w-full px-[5%]">
         <div className="w-full max-w-[80rem] mx-auto flex flex-col gap-y-20">
-          <div className="w-full flex justify-between items-end">
+          <div className="w-full flex justify-between items-end max-[992px]:justify-center max-[992px]:text-center">
             <h2 className="text-[3rem] font-light max-w-[40rem] tracking-[-0.02em]">
               Payment solutions purpose-built for the tech industry.
             </h2>
-            <a className="text-black text-lg font-medium rounded-lg min-w-37 h-15">
+            <a className="text-black text-lg font-medium rounded-lg min-w-37 h-15 max-[992px]:hidden">
               See what I can finance with Gynger
             </a>
           </div>
           <div className="flex flex-col gap-x-6">
-            <div className="bg-[#f7fafa] flex relative rounded-3xl overflow-hidden">
-              <div className="flex flex-col justify-between py-[7.5rem] px-[6%] relative z-2 w-[46%]">
+            <div className="bg-[#f7fafa] flex relative rounded-3xl overflow-hidden max-[992px]:flex-col-reverse">
+              <div className="flex flex-col justify-between py-[7.5rem] px-[6%] relative z-2 w-[46%] max-[992px]:w-full max-[992px]:items-center">
                 <h3 className="text-[3rem] font-light">Gynger Pay</h3>
                 <div>
                   <p className="mb-10 text-xl ">
@@ -24,7 +24,7 @@ const Product = () => {
                     getting paid up front.
                   </p>
                   <div className="flex flex-wrap">
-                    <div className="flex gap-x-2 py-[1.25rem] px-[1rem] bg-[#ebf2f2] rounded-xl">
+                    <div className="flex gap-x-2 py-[1.25rem] px-[1rem] bg-[#ebf2f2] rounded-xl max-[992px]:w-full max-[992px]:justify-center">
                       <Image
                         src="/product.svg"
                         alt="product icon"
@@ -73,10 +73,10 @@ const Product = () => {
                                     <p className="text-[2em] tracking-[-0.02em]">Offer viewed</p>
                                 </div>
                                 <div className="flex bg-[#c5d9d9] rounded-[1.8em] gap-x-[1.6em] justify-start item-center p-[2em] pr-[0.4em]">
-                                    <p className="text-[2em] tracking-[-0.02em]">Offer viewed</p>
+                                    <p className="text-[2em] tracking-[-0.02em]">Payment received</p>
                                 </div>
                                 <div className="flex bg-[#c5d9d9] rounded-[1.8em] gap-x-[1.6em] justify-start item-center p-[2em] pr-[0.4em]">
-                                    <p className="text-[2em] tracking-[-0.02em]">Offer viewed</p>
+                                    <p className="text-[2em] tracking-[-0.02em]">Offer created</p>
                                 </div>
                             </div>
                         </div>

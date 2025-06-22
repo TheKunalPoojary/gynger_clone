@@ -42,7 +42,7 @@ const FeatureCard = ({ title, description, animationData }: FeatureCardProps) =>
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="pt-10 px-10 pb-6">
+      <div className="pt-10 px-10 pb-6 max-[992px]:text-center">
         <div className="mb-4">
           <p className="text-2xl">{title}</p>
         </div>

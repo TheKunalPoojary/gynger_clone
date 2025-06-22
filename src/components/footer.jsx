@@ -26,8 +26,8 @@ const Footer = () => {
   return (
     <footer className="text-white bg-[#031f1c] pt-16 pb-20">
       <div className="w-full px-[5%]">
-        <div className="max-w-[80rem] flex flex-col gap-y-2">
-          <div className="flex items-start justify-between">
+        <div className="max-w-[80rem] flex flex-col gap-y-2 max-[992px]:gap-y-14">
+          <div className="flex items-start justify-between max-[992px]:flex-col max-[992px]:gap-y-14">
             <div className="w-32">
               <Image
                 src={Gynger}
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             <div className="max-w-[27.5rem]">
               <div className="mb-8">
-                <p className="">
+                <p>
                   Check out the latest updates to our products here. Stay up to
                   date on all changes by subscribing to our Newsletter.
                 </p>
@@ -68,8 +68,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between items-end">
-            <div className="flex gap-x-20">
+          <div className="flex justify-between items-end max-[992px]:flex-col max-[992px]:gap-y-14 max-[992px]:items-start">
+            <div className="flex gap-x-20 max-[472px]:flex-col max-[497px]:gap-y-14">
               <div className="flex flex-col items-start gap-y-2">
                 {links.map((link, index) => (
                   <a key={index} href="/" className="text-[20px] font-medium">
@@ -85,7 +85,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div className="flex flex-col items-end">
+            <div className="flex flex-col items-end max-[992px]:items-start">
                 <div className="m-4 gap-x-4 flex">
                     <Image src={Built} alt="Logo" width={100} height={100} className="w-20 h-20"/>
                     <Image src={Soc} alt="Logo" width={100} height={100} className="w-20 h-20"/>

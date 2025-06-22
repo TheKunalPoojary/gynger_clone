@@ -14,11 +14,11 @@ const Solution = () => {
         <div className='w-full px-[5%]'>
             <div className='w-full bg-[#052b28] rounded-[2.4rem] max-w-[80rem] mx-auto'>
                 <div className='flex flex-col gap-y-20 py-[7.5rem] px-[6%]'>
-                    <div className='flex justify-between items-end'>
+                    <div className='flex justify-between items-end max-[767px]:flex-col max-[767px]:items-center max-[767px]:text-center'>
                         <h2 className='text-[4rem] font-extralight'>Find your solution</h2>
                         <a className='bg-[#9fe29e] flex justify-center items-center text-black text-lg rounded-lg min-w-37 h-15 '>Talk to us</a>
                     </div>
-                    <div className='flex gap-x-5'>
+                    <div className='flex gap-x-5 max-[992px]:grid max-[992px]:auto-cols-[1fr] max-[992px]:grid-col-[1fr_1fr] max-[992px]:grid-row-[auto_auto] max-[992px]:gap-x-[1.2rem] max-[992px]:gap-y-[1.2rem]'>
                         {persons.map((person,index)=>(
                             <div key={index} className='flex flex-1 flex-col gap-y-10 rounded-2xl items-center p-6' style={{backgroundColor:"#013d3d"}}>
                                 <Image
