@@ -34,7 +34,7 @@ export default function RootLayout({
       <body
         className={archivo.className}
       >
-        <div>
+        <div className="min-h-screen w-full overflow-x-hidden">
           <Header />
           {children}
           <Footer />

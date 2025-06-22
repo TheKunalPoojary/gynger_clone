@@ -40,18 +40,16 @@ body {
   line-height: 1.5;
 }
 
-h1 {
-    letter-spacing: -.04em;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 4.5rem;
-    font-weight: 400;
-    line-height: 1.16;
-}
-
 p {
     display: block;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    letter-spacing: -.03em;
+    font-size: 3rem;
+  }
 }

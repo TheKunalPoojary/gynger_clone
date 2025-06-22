@@ -6,10 +6,10 @@ const Herosection = () => {
     <section className="text-white relative pt-[17.5rem] pb-[10rem] z-4">
       <div className="px-[5%] flex flex-col justify-center items-center relative z-50">
         <div className="text-center mb-6">
-          <h1>Master your cash flow</h1>
+          <h1 className="text-7xl max-[767px]:text-5xl">Master your cash flow</h1>
         </div>
         <div>
-          <p className="text-xl mb-12">
+          <p className="text-xl mb-12 text-center">
             Flexible payments and embedded financing solutions for buyers and
             sellers of technology.
           </p>
