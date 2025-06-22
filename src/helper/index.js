@@ -5,11 +5,17 @@ const liveEdit = process.env.CONTENTSTACK_LIVE_EDIT_TAGS === "false";
 
 export const getHeaderRes = async () => {
     const response = await Stack.getEntry({
-        contentTypeUid: "header",
-        referenceFieldPath: ["nav_pages.navlink"],
-        jsonRtePath: ["logo"],
+        contentTypeUid: "navbar",
     });
 
     liveEdit && addEditableTags(response[0][0], "header", true);
+    return response[0][0];
+};
+
+export const getFooterRes = async () => {
+    const response = await Stack.getEntry({
+        contentTypeUid: "bottom_section",
+    });
+    liveEdit && addEditableTags(response[0][0], "footer", true);
     return response[0][0];
 };

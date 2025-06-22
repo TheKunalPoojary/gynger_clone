@@ -1,29 +1,23 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Logo from "../../public/gynger.svg";
 import { useEffect, useState } from "react";
 import { getHeaderRes } from "@/helper/index";
 
-const navlinks = [
-  { name: "For buyers" },
-  { name: "For sellers" },
-  { name: "Product" },
-  { name: "Solutions" },
-  { name: "Resources" },
-  { name: "Company" },
-];
+type HeaderType = {
+  logo?: {
+    url?: string;
+  };
+  navbar_menu?: [{ navlink: string }];
+};
 
 const Headers = () => {
-  const[header, setHeader] = useState(undefined);
+  const [header, setHeader] = useState<HeaderType | undefined>(undefined);
 
   useEffect(() => {
     const fetchHeader = async () => {
       const headerRes = await getHeaderRes();
-      console.log("headerRes", headerRes);
       setHeader(headerRes);
-      console.log("header", header);
     };
     fetchHeader();
   }, []);
@@ -38,21 +32,23 @@ const Headers = () => {
         style={{ backgroundColor: "#052b28cc" }}
       >
         <Link href="/">
-          <Image src={Logo} alt="logo" width={50} height={50} className="w-22" />
+          <img src={header?.logo?.url} alt="logo" className="w-22" />
         </Link>
-        <nav className="static flex flex-1 justify-start items-center align-center self-center max-[992px]:invisible">
-          {navlinks.map((link, index) => (
+        <nav className="static flex flex-1 justify-start items-center align-center self-center max-[992px]:hidden">
+          {header?.navbar_menu?.map((link, index) => (
             <Link
               key={index}
               href="/"
               className="px-2 hover:text-[#00b4d8] transition-all duration-300"
             >
-              {link.name}
+              {link.navlink}
             </Link>
           ))}
         </nav>
-        <div className="flex gap-x-2 gap-y-2 items-center">
-          <a className="px-5 py-4 max-[992px]:invisible" href="/">Sign In</a>
+        <div className="flex gap-x-2 gap-y-2 items-center ml-auto">
+          <a className="px-5 py-4 max-[992px]:hidden" href="/">
+            Sign In
+          </a>
           <button
             className="rounded-full px-5 py-4"
             style={{ backgroundColor: "#9fe29e", color: "#000000" }}

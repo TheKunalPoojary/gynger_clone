@@ -1,47 +1,50 @@
 "use client";
-import React from "react";
+import React,{useEffect,useState} from "react";
+import { getFooterRes } from "@/helper";
 import Image from "next/image";
-import Gynger from "../../public/gynger.svg";
 import Soc from "../../public/licesence/67e1edd12e0f1c1b7b9d6c1b_soc-2.avif";
 import Built from "../../public/licesence/67e1edd15128b6e6e78de281_built-in.avif";
 
-const links = [
-  { title: "Gynger Pay" },
-  { title: "Gynger AP Financing" },
-  { title: "Gynger AR Financing" },
-  { title: "Blog" },
-  { title: "FAQs" },
-  { title: "About us" },
-  { title: "Careers" },
-];
-const links2 = [
-  { title: "LinkedIn" },
-  { title: "X / Twitter" },
-  { title: "Privacy Policy" },
-  { title: "Terms of service" },
-  { title: "contact@gynger.io" },
-];
-
 const Footer = () => {
+  const [footer, setFooter] = useState<FooterType|undefined>(undefined);
+
+  type FooterType = {
+    logo?: {
+      url?: string;
+    };
+    description: string;
+    nav_group: { nav_link: string }[];
+    website_group: { website_link: string }[];
+    stamp:{}[];
+  };
+
+  useEffect(() => {
+      const fetchHeader = async () => {
+        const footerRes = await getFooterRes();
+        console.log(footerRes);
+        setFooter(footerRes);        
+      };
+      fetchHeader();
+    }, []);
+
   return (
     <footer className="text-white bg-[#031f1c] pt-16 pb-20">
       <div className="w-full px-[5%]">
         <div className="max-w-[80rem] flex flex-col gap-y-2 max-[992px]:gap-y-14">
           <div className="flex items-start justify-between max-[992px]:flex-col max-[992px]:gap-y-14">
             <div className="w-32">
-              <Image
-                src={Gynger}
-                alt="Logo"
-                width={100}
-                height={100}
-                className="w-full"
-              />
+              {footer?.logo?.url ? (
+                <img
+                  src={footer.logo.url}
+                  alt="Logo"
+                  className="w-full"
+                />
+              ) : null}
             </div>
             <div className="max-w-[27.5rem]">
               <div className="mb-8">
                 <p>
-                  Check out the latest updates to our products here. Stay up to
-                  date on all changes by subscribing to our Newsletter.
+                  {footer?.description}
                 </p>
               </div>
               <div className="w-full max-w-md">
@@ -71,16 +74,16 @@ const Footer = () => {
           <div className="flex justify-between items-end max-[992px]:flex-col max-[992px]:gap-y-14 max-[992px]:items-start">
             <div className="flex gap-x-20 max-[472px]:flex-col max-[497px]:gap-y-14">
               <div className="flex flex-col items-start gap-y-2">
-                {links.map((link, index) => (
+                {footer?.nav_group?.map((link, index) => (
                   <a key={index} href="/" className="text-[20px] font-medium">
-                    {link.title}
+                    {link.nav_link}
                   </a>
                 ))}
               </div>
               <div className="flex flex-col items-start gap-y-2">
-                {links2.map((link, index) => (
+                {footer?.website_group?.map((link, index) => (
                   <a key={index} href="/" className="text-[20px] font-medium">
-                    {link.title}
+                    {link.website_link}
                   </a>
                 ))}
               </div>
