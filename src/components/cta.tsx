@@ -43,7 +43,7 @@ const Cta = () => {
               </div>
           </div>
           <div className="flex flex-1 items-center justify-center max-[992px]:py-12">
-            <div className="flex flex-col items-center justify-center text-[0.625rem]">
+            <div className="flex flex-col items-center justify-center text-[0.625rem] max-[767px]:text-[1.5vw]">
                 <img src="/cta/67e2ec6ff072b4bc5eab6f4a_gynger-card.avif" alt="card" className="w-[38em] ml-[10em] rounded-2xl" />
                 <img src="/cta/682a3d2f315fe0e5d7dc5874_bottom-cta.avif" alt="card shadow" className="w-[34em] mt-[-11em] self-start rounded-2xl backdrop-blur-[18px]" />
             </div>

@@ -53,3 +53,38 @@ p {
     font-size: 3rem;
   }
 }
+
+  /* Card 1 */
+  .feature-grid_card-1_visual:hover .feature-grid_card-1_card:not(.is-1){
+    transform: translate(0) !important;
+    filter: blur(0);
+    opacity: 1;
+    box-shadow: 0 0px 0px 0 hsla(0, 0.00%, 0.00%, 0);
+  }
+
+  /* Card 2 */
+  @keyframes marqueeUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes marqueeDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(50%);
+    }
+  }
+
+  .feature-grid_card-2_visual > div:nth-child(odd) {
+    animation: marqueeUp 30s linear infinite;
+  }
+  .feature-grid_card-2_visual > div:nth-child(even){
+    animation: marqueeDown 30s linear infinite;
+    align-self: flex-end;
+  }

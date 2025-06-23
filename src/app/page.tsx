@@ -1,5 +1,6 @@
 import Blueprint from "@/components/blueprint";
 import Cta from "@/components/cta";
+import Features from "@/components/features";
 import Herosection from "@/components/herosection";
 import LogoShowcase from "@/components/logoShowcase";
 import Product from "@/components/product";
@@ -13,6 +14,7 @@ export default function Home() {
       <Blueprint />
       <Product />
       <Solution />
+      <Features />
       <Cta />
     </main>
   );
