@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className="text-white bg-[#031f1c] pt-16 pb-20">
       <div className="w-full px-[5%]">
-        <div className="max-w-[80rem] flex flex-col gap-y-2 max-[992px]:gap-y-14">
+        <div className="max-w-[80rem] flex flex-col gap-y-2 max-[992px]:gap-y-14 mx-auto">
           <div className="flex items-start justify-between max-[992px]:flex-col max-[992px]:gap-y-14">
             <div className="w-32">
               {footer?.logo?.url ? (

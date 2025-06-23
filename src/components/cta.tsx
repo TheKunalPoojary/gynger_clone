@@ -22,7 +22,7 @@ const Cta = () => {
             <div className="w-full max-w-md">
                 <div className="border-2 border-[#ffffff24] rounded-xl p-2 shadow">
                   <form
-                    className="flex items-center"
+                    className="z-20 border-2 border-white/10 rounded-lg flex justify-start items-center p-2 transition-all duration-300 relative shadow-xs"
                     onSubmit={(e) => {
                       e.preventDefault();
                       console.log("submit");

@@ -129,7 +129,7 @@ const Features = () => {
                     <div>
                       <div className="feature-grid_card-2_col">
                         {firstColumnItems.map((logo, index) => (
-                          <div className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
+                          <div key={index} className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
                             <img
                               key={index}
                               src={logo.src}
@@ -141,7 +141,7 @@ const Features = () => {
                       </div>
                       <div className="feature-grid_card-2_col">
                         {firstColumnItems.map((logo, index) => (
-                          <div className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
+                          <div key={index} className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
                             <img
                               key={index}
                               src={logo.src}
@@ -155,7 +155,7 @@ const Features = () => {
                     <div>
                       <div className="feature-grid_card-2_col">
                         {secondColumnItems.map((logo, index) => (
-                          <div className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
+                          <div key={index} className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
                             <img
                               key={index}
                               src={logo.src}
@@ -167,7 +167,7 @@ const Features = () => {
                       </div>
                       <div className="feature-grid_card-2_col">
                         {secondColumnItems.map((logo, index) => (
-                          <div className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
+                          <div key={index} className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
                             <img
                               key={index}
                               src={logo.src}
@@ -181,7 +181,7 @@ const Features = () => {
                     <div>
                       <div className="feature-grid_card-2_col">
                         {thirdColumnItems.map((logo, index) => (
-                          <div className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
+                          <div key={index} className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
                             <img
                               key={index}
                               src={logo.src}
@@ -193,7 +193,7 @@ const Features = () => {
                       </div>
                       <div className="feature-grid_card-2_col">
                         {thirdColumnItems.map((logo, index) => (
-                          <div className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
+                          <div key={index} className="aspect-square bg-white rounded-[3.2em] w-[14.8em] mb-[1.2em] relative overflow-hidden feature-grid_card-2_item">
                             <img
                               key={index}
                               src={logo.src}
