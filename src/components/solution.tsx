@@ -4,9 +4,12 @@ import React from 'react'
 
 interface SolutionProps {
   data: {
-    solution?: {
         title?: string;
-    }
+        people?: {
+            logo?: string;
+            photo?: string;
+            description?: {line:string}[];
+        }[]
   } | undefined;
 }
 
@@ -24,7 +27,7 @@ const Solution: React.FC<SolutionProps> = ({ data }) => {
             <div className='w-full bg-[#052b28] rounded-[2.4rem] max-w-[80rem] mx-auto'>
                 <div className='flex flex-col gap-y-20 py-[7.5rem] px-[6%]'>
                     <div className='flex justify-between items-end max-[767px]:flex-col max-[767px]:items-center max-[767px]:text-center'>
-                        <h2 className='text-[4rem] font-extralight'>{data?.solution?.title}</h2>
+                        <h2 className='text-[4rem] font-extralight'>Find Your Solution</h2>
                         <a className='bg-[#9fe29e] flex justify-center items-center text-black text-lg rounded-lg min-w-37 h-15 '>Talk to us</a>
                     </div>
                     <div className='flex gap-x-5 max-[992px]:grid max-[992px]:auto-cols-[1fr] max-[992px]:grid-col-[1fr_1fr] max-[992px]:grid-row-[auto_auto] max-[992px]:gap-x-[1.2rem] max-[992px]:gap-y-[1.2rem]'>

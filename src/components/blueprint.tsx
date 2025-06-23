@@ -29,9 +29,6 @@ const Blueprint: React.FC<BlueprintProps> = ({ data }) => {
                     <a className='text-lg text-gray-500 max-[992px]:hidden'>Talk to Us</a>
                 </div>
                 <div className='flex gap-x-4 max-[992px]:flex-col'>
-                    {data?.section?.map((item, index) => (
-                        <BlueprintComponent key={index} title={item.title} description={item.description} animationData={item.svg_file?.href} />
-                    ))}
                     <BlueprintComponent title="Control burn" description="Smooth out chunky payables, conserve your working capital, and invest where it matters most." animationData={Control} />
                     <BlueprintComponent title="Accelerate revenues" description="Streamline receivables and close cash gaps without compromising customer relationships." animationData={Accelerate} />
                     <BlueprintComponent title="Grow with confidence" description="Embed Gynger across your financial workflows to optimize key performance indicators and achieve lasting success." animationData={Growth} /> 

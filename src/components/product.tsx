@@ -113,8 +113,8 @@ const Product: React.FC<ProductProps> = ({ data }) => {
                 Pay
               </div>
             </div>
-            <div className="relative flex overflow-hidden rounded-3xl bg-[#f7fafa]">
-              <div className="z-[2] gap-x-[5rem] gap-y-[5rem] flex flex-col justify-between w-[46%] p-[5rem_6%] relative">
+            <div className="relative flex overflow-hidden rounded-3xl bg-[#f7fafa] max-[992px]:flex-col">
+              <div className="z-[2] gap-x-[5rem] gap-y-[5rem] flex flex-col justify-between w-[46%] p-[5rem_6%] relative max-[992px]:w-full max-[992px]:text-center">
                 <h3 className="tracking-[-0.02em] mt-0 mb-0 text-[3rem] font-light leading-[1.3]">
                   Gynger Capital
                 </h3>
@@ -125,7 +125,7 @@ const Product: React.FC<ProductProps> = ({ data }) => {
                       embedded AP and AR financing solutions.
                     </p>
                   </div>
-                  <div className="flex flex-col flex-wrap gap-y-2">
+                  <div className="flex flex-col flex-wrap gap-y-2 ">
                     <a className="gap-x-[.875rem] gap-y-[.875rem] bg-green-50 rounded-[.75rem] justify-start items-center p-[1rem_1.25rem] flex">
                       <img
                         src="https://cdn.prod.website-files.com/67de8f1c7b26a9b133f316cb/67e9290f30d76b05050b7ae9_8501452a804098da8241ea0c9eeb7ea8_capital-ap_icon.svg"
