@@ -19,3 +19,11 @@ export const getFooterRes = async () => {
     liveEdit && addEditableTags(response[0][0], "footer", true);
     return response[0][0];
 };
+
+export const getMainRes = async () => {
+    const response = await Stack.getEntry({
+        contentTypeUid: "full_page",
+    });
+    liveEdit && addEditableTags(response[0][0], "footer", true);
+    return response[0][0];
+};

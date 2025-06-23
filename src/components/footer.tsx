@@ -1,9 +1,6 @@
 "use client";
 import React,{useEffect,useState} from "react";
 import { getFooterRes } from "@/helper";
-import Image from "next/image";
-import Soc from "../../public/licesence/67e1edd12e0f1c1b7b9d6c1b_soc-2.avif";
-import Built from "../../public/licesence/67e1edd15128b6e6e78de281_built-in.avif";
 
 const Footer = () => {
   const [footer, setFooter] = useState<FooterType|undefined>(undefined);
@@ -15,13 +12,12 @@ const Footer = () => {
     description: string;
     nav_group: { nav_link: string }[];
     website_group: { website_link: string }[];
-    stamp:{}[];
+    stamps:{stamp:{url:string}}[];
   };
 
   useEffect(() => {
       const fetchHeader = async () => {
         const footerRes = await getFooterRes();
-        console.log(footerRes);
         setFooter(footerRes);        
       };
       fetchHeader();
@@ -90,8 +86,11 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-end max-[992px]:items-start">
                 <div className="m-4 gap-x-4 flex">
-                    <Image src={Built} alt="Logo" width={100} height={100} className="w-20 h-20"/>
-                    <Image src={Soc} alt="Logo" width={100} height={100} className="w-20 h-20"/>
+                  {footer?.stamps?.map((stamp, index) => (
+                    <img key={index} src={stamp.stamp.url} alt="logo" className="w-20 h-20" />
+                  ))}
+                    {/* <img src={Built} alt="Logo" className="w-20 h-20"/>
+                    <img src={Soc} alt="Logo" width={100} height={100} className="w-20 h-20"/> */}
                 </div>
                 <p  className="text-sm">© 2025 Gynger.io —  157 W 18th Street, Floor 5, New York, NY 10011</p>
             </div>

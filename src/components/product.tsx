@@ -46,6 +46,9 @@ const Product = () => {
                       </div>
                       <div className="flex flex-col justify-start gap-[3.2em] p-[2.4em]">
                         <div className="flex items-center justify-start gap-x-[2.4em]">
+                          <div className="aspect-square cursor-pointer border-2 border-gray-300 rounded-lg flex justify-center items-center w-16 transition-colors duration-400">
+
+                          </div>
                           <div className="text-[2.4em]">Pay monthly</div>
                         </div>
                         <div className="flex items-center justify-start gap-x-[2.4em]">
