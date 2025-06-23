@@ -2,7 +2,13 @@
 import Image from "next/image";
 import React from "react";
 
-const Cta = () => {
+interface CtaProps {
+  data: {
+    cta?: boolean;
+  } | undefined;
+}
+
+const Cta: React.FC<CtaProps> = ({ data }) => {
   return (
     <section className="py-20 px-[5%]" style={{ backgroundColor: "#dae8e8" }}>
       <div className="w-full max-w-7xl mx-auto rounded-2xl overflow-hidden">

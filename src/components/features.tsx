@@ -3,7 +3,13 @@ import Lottie from "lottie-react";
 import React from "react";
 import FastApproval from "../../public/feature/fastapproval.json";
 
-const Features = () => {
+interface FeaturesProps {
+  data: {
+    features_section?: boolean;
+  } | undefined;
+}
+
+const Features: React.FC<FeaturesProps> = ({ data }) => {
   const fullItems = [
     {
       src: "https://cdn.prod.website-files.com/67de8f1c7b26a9b133f316cb/67e317a22388dc2c6c08b62a_mercury.avif",

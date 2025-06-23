@@ -1,17 +1,20 @@
 "use client";
 import React from "react";
 
-const Herosection = () => {
+interface HerosectionProps {
+  data: any;
+}
+
+const Herosection: React.FC<HerosectionProps> = ({ data }) => {
   return (
     <section className="text-white relative pt-[17.5rem] pb-[10rem] z-4">
       <div className="px-[5%] flex flex-col justify-center items-center relative z-50">
         <div className="text-center mb-6">
-          <h1 className="text-7xl max-[767px]:text-5xl">Master your cash flow</h1>
+          <h1 className="text-7xl max-[767px]:text-5xl">{data?.title}</h1>
         </div>
         <div>
           <p className="text-xl mb-12 text-center">
-            Flexible payments and embedded financing solutions for buyers and
-            sellers of technology.
+            {data?.description}
           </p>
         </div>
         <div className="w-full max-w-md">
@@ -39,7 +42,7 @@ const Herosection = () => {
       </div>
       <div className="absolute inset-[0%] z-1">
         <iframe
-          src="https://my.spline.design/cubiccopy-58ccfada32ada29de256862c00e83a1f/"
+          src={data?.url?.href}
           width="100%"
           height="100%"
           loading="lazy"

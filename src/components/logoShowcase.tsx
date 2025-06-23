@@ -2,6 +2,12 @@
 import React from 'react'
 import Image from 'next/image'
 
+interface LogoShowcaseProps {
+  data: {
+    scroller?: boolean;
+  } | undefined;
+}
+
 const logoData = [
   { url: "/company/68093db47d156386de8b4117_aws.svg" },
   { url: "/company/68093dc872e8e2e140204e43_adobe.svg" },
@@ -27,7 +33,7 @@ const logoData = [
   { url: "/company/680bc475b8840aa3a1327c82_cdw.svg" },
 ]
 
-const LogoShowcase = () => {
+const LogoShowcase: React.FC<LogoShowcaseProps> = ({ data }) => {
   return (
     <section className='relative py-10 overflow-hidden flex'>
       <div className='flex gap-4 animate-infinite-scroll' >

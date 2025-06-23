@@ -1,7 +1,14 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
-const Product = () => {
+interface ProductProps {
+  data: {
+    product?: boolean;
+  } | undefined;
+}
+
+const Product: React.FC<ProductProps> = ({ data }) => {
   return (
     <section className="w-fullpt-30">
       <div className="w-full px-[5%]">
@@ -46,12 +53,15 @@ const Product = () => {
                       </div>
                       <div className="flex flex-col justify-start gap-[3.2em] p-[2.4em]">
                         <div className="flex items-center justify-start gap-x-[2.4em]">
-                          <div className="aspect-square cursor-pointer border-2 border-gray-300 rounded-lg flex justify-center items-center w-16 transition-colors duration-400">
+                          <div className="aspect-square cursor-pointer border-2 border-gray-300 rounded-lg flex justify-center items-center w-[4em] transition-colors duration-400">
 
                           </div>
                           <div className="text-[2.4em]">Pay monthly</div>
                         </div>
                         <div className="flex items-center justify-start gap-x-[2.4em]">
+                          <div className="aspect-square cursor-pointer border-2 border-gray-300 rounded-lg flex justify-center items-center w-[4em] transition-colors duration-400">
+
+                          </div>
                           <div className="text-[2.4em]">Net terms</div>
                         </div>
                         <div className="flex text-center cursor-pointer rounded-[1.2em] justify-center items-center w-full h-[7em] py-[1.5em] px-[4em] shadow-[0_2px_9px_#0000000d]">
