@@ -38,7 +38,6 @@ export default function Home() {
   const scoller = main?.page_component?.find((a) => a.scroller);
   // console.log(scoller)
   const blueprint = main?.page_component?.find((a) => a.blueprint).blueprint;
-  console.log(blueprint)
   const features = main?.page_component?.find((a) => a.features_section);
   // console.log(features)
   const product = main?.page_component?.find((a) => a.product);

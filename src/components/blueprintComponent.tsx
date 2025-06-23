@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import Lottie from 'lottie-react';
 
 interface FeatureCardProps {
-  title: string;
-  description: string;
-  animationData: any;
+  title?: string;
+  description?: string;
+  animationData?: any;
 }
 
-const FeatureCard = ({ title, description, animationData }: FeatureCardProps) => {
+const FeatureCard = ({ title = "", description = "", animationData }: FeatureCardProps) => {
   const lottieRef = useRef<any>(null);
   const [playedOnce, setPlayedOnce] = useState(false);
 
